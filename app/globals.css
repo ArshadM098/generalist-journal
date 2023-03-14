@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .test {
+    border: 2px dotted red;
+  }
+}
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
