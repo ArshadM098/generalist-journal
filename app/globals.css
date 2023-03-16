@@ -4,7 +4,7 @@
 
 @layer utilities {
   .test {
-    border: 2px dotted red;
+    border: 0px dotted red;
   }
 }
 /* :root {

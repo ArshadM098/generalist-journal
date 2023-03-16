@@ -1,26 +1,23 @@
-import NavBar from "@/components/navBar"
+"use client";
+import { NavBar, HamBtn } from "@/components/navBar";
+import { useState } from "react";
 
-export default function Layout({ children,title }) {
-    return (
-      <div className="flex flex-col">
-        <div id="top_container" className="test h-32 grow-0">
-        
-        <div id="title_bar" className="test block text-5xl m-auto">{title}</div>
-        <div id="hamburger"></div>
+export default function SubLayout({ children}) {
+  const [showDropdown, setShowDropdown] = useState(false);
 
-        </div>
-
-          <div id="mid_container" className="test min-h-[700px] flex flex-row">
-
-            <div id="main_content" className="test grow max-w-[1500px] mr-[500px]">{children[0]}</div>
-
-            <NavBar id="navbar" className='test'></NavBar>
-
-          </div>
-
-          <div id="bottom_container" className='test h-32 grow-0'>{children[1]}</div>
+  return (
+    <>
+      <div className="absolute flex flex-col gap-2 justify-center h-full test w-full px-2 overflow-auto z-10">
+        {children}
       </div>
-          
-          
-    )
-  }
+      <div className=" absolute right-0 h-full top-0 w-full overflow-hidden">
+        <div className="z-30 absolute right-0 w-fit m-10 hover:cursor-pointer select-none" onClick={() => setShowDropdown(!showDropdown)}>
+          <HamBtn />
+        </div>
+        <div className={`z-20 backdrop-blur-xl absolute h-full right-0 top-0 ${showDropdown ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} transition-all`}>
+          <NavBar />
+        </div>
+      </div>
+    </>
+  );
+}
