@@ -4,8 +4,9 @@
 
 @layer utilities {
   .test {
-    border: 0px dotted red;
+    border: 1px dotted red;
   }
+  
 }
 /* :root {
   --max-width: 1100px;
