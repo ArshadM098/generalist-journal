@@ -16,7 +16,7 @@ export function HamBtn({handler}){
 }
 export function NavBar({}){
     return(
-            <div id="navigation-bar" className="relative min-h-[600px] h-full right-0 border-l-4 border-white border-solid top-0 bottom-0 rounded-lg">
+            <div id="navigation-bar" className=" bg-slate-800 bg-opacity-40 relative min-h-[600px] h-full right-0 btop-0 bottom-0 rounded-lg">
         <NavList></NavList>
             </div>
         
