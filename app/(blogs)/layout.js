@@ -1,5 +1,5 @@
 export default function Layout({children}){
-    return (<div className="test flex flex-col justify-start mr-20 pl-5 p-2 gap-y-2">
+    return (<div className="test flex flex-col justify-start max-w-[1200px] m-auto pl-5 p-2 gap-y-10">
         {children}
     </div>)
 }

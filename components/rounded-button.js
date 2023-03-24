@@ -1,5 +1,5 @@
-
-export default function RoundedButton({children}){
+import Link from "next/link"
+export default function RoundedButton({children, link="/"}){
     return(<>
         <div className=" block relative rounded-full h-fit w-fit z-auto
          px-5 py-2 pb-3 m-2
@@ -9,7 +9,7 @@ export default function RoundedButton({children}){
           hover:cursor-pointer select-none
           text-1xl
           backdrop-brightness-50
-          ">{children}</div>
+          "><Link href={link}>{children}</Link></div>
           </>
     )
 }

@@ -2,7 +2,7 @@
 import RoundedButton from "./rounded-button";
 import { useState } from "react"; // Import the CSS file for DisplayCard
 
-export default function DisplayCard({ children, imageUrl }) {
+export default function DisplayCard({ children, imageUrl, link="/" }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export default function DisplayCard({ children, imageUrl }) {
       <div className="relative h-full w-full backdrop-blur-[2px] transition-all">
         <div className="absolute text-white text-2xl font-bold m-5">{children}</div>
         <div className={`absolute bottom-0 right-0 transition-opacity ${isHovered ? "opacity-100" : "opacity-0"}`}>
-          <RoundedButton c>
+          <RoundedButton link={link}>
             Proceed
           </RoundedButton>
         </div>
