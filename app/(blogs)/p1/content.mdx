@@ -1,31 +1,42 @@
 import img1 from "public/placeholder.webp";
+import DisplayCard from "/components/displayCard";
+import * as C from "/components/mdxComponents";
 
-<TitleL>
+<C.TitleL>
 Adaptive Filtering for Image Denoising
- </TitleL>
- <SkillBlock>
+</C.TitleL>
+ <DisplayCard>
+ Hello
+ </DisplayCard>
+<C.TitleText>
+<>
+Summary
+</>
+<>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</>
+</C.TitleText>
+
+ <C.SkillBlock>
 python
-</SkillBlock>
-<SkillBlock>
-python
-</SkillBlock>
-<TitleM>
+</C.SkillBlock>
+<C.TitleM>
 Hello, World!
-</TitleM>
-<Text1>
+</C.TitleM>
+<C.Text1>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua.
-</Text1>
-<Image1 src={img1} />
-<TextImage src={img1}>
+</C.Text1>
+<C.Image1 src={img1} />
+<C.TextImage src={img1}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua.
-</TextImage>
-<TextImage src={img1} reverseOrder={true}>
+</C.TextImage>
+<C.TextImage src={img1} reverseOrder={true}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua.
-</TextImage>
-<CodeBlock>
+</C.TextImage>
+<C.CodeBlock>
   <span>
   pages.js
   </span>
@@ -36,5 +47,7 @@ Hello, World!
     return <Content/>
     }
   ```
-</CodeBlock>
+</C.CodeBlock>
+
+
 

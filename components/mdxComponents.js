@@ -1,30 +1,30 @@
 'use client';
 import Image from "next/image"
 
-function Text1({children}){
+export function Text1({children}){
     return(
         <div className="test p-2 text-2xl" >{children}</div>
     )
 }
-function TitleL({children}){
+export function TitleL({children}){
     return(
         <div className="test pt-20 text-7xl first-letter:text-8xl capitalize">{children}</div>
     )
     }
 
-function TitleM({children}){
+export function TitleM({children}){
     return(
         <div className="test text-5xl first-letter:text-6xl">{children}</div>
     )
     }
 
-function Image1({src}){
+export function Image1({src}){
     return(
         <Image src={src} className="h-64 w-fit test object-contain rounded-md overflow-hidden m-auto"></Image>
     )
     }
 
-function TextImage({ src, children, reverseOrder = false }) {
+export function TextImage({ src, children, reverseOrder = false }) {
     const imageOrder = reverseOrder ? "lg:order-1" : "lg:order-2";
     const textOrder = reverseOrder ? "lg:order-2" : "lg:order-1";
   
@@ -40,7 +40,7 @@ function TextImage({ src, children, reverseOrder = false }) {
   
 
 import { useEffect } from "react"
-function CodeBlock({ children }) {
+export function CodeBlock({ children }) {
     useEffect(() => {
       const parentDiv = document.getElementById("container");
       const child2 = document.getElementById("code_box");
@@ -65,15 +65,27 @@ function CodeBlock({ children }) {
     );
   }
   
-  function SkillBlock({ children }) {
+export function SkillBlock({ children }) {
     return (
       <div className=" inline relative w-fit border-[1px] px-2 py-2 text-white  border-orange-800 border-solid text-center">
        {children}
       </div>
     );
   }
-  export function useMDXComponents(components){
-    return {CodeBlock,TitleL,TitleM,Text1,TextImage,Image1, SkillBlock,...components};
-  }
 
+export function TitleText({children}){
+  useEffect(() => {
+    const parentDiv = document.getElementById("containerTitleText");
+    const child2 = document.getElementById("text_box");
 
+    const combinedHeight = child2.offsetHeight + 40;
+    parentDiv.style.height = `${combinedHeight}px`;
+  }, []);
+  return (
+    <div id="containerTitleText" className="relative test">
+      <div id="text_box" className="absolute top-4 h-fit w-full p-5 pt-10 border-slate-500 border-solid border-[1px]">{children[1]}</div>
+      <div className="absolute bg-red-900 text-white p-1 px-4 -left-4 w-fit text-2xl">{children[0]}</div>
+      
+    </div>
+  )
+}
