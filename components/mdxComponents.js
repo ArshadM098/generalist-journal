@@ -19,6 +19,12 @@ export function TitleM({children}){
     )
     }
 
+export function TitleS({children}){
+    return(
+        <div className="test text-3xl first-letter:text-4xl text-slate-500">{children}</div>
+        )
+        }
+
 export function Image1({src}){
     return(
         <Image src={src} className="h-64 w-fit test object-contain rounded-md overflow-hidden m-auto"></Image>
@@ -85,7 +91,7 @@ export function TitleText({children}){
   return (
     <div id="containerTitleText" className="relative">
       <div id="text_box" className="absolute top-4 h-fit w-full p-5 pt-10 pb-8 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
-      <div className="absolute bg-red-900 text-white p-1 px-4 -left-4 w-fit text-2xl ">{children[0]}</div>
+      <div className="absolute bg-orange-500 text-white p-1 px-4 -left-4 w-fit text-2xl ">{children[0]}</div>
       
     </div>
   )

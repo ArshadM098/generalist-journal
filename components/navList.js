@@ -5,16 +5,11 @@ export default function NavList(){
     return (
         <div className="flex flex-col w-96 overflow-hidden pt-20 pl-5">
             <NavBtns link="/">About</NavBtns>
-
             <NavBtns link="/">Home</NavBtns>
             <NavBtns link="/gallery">Idea Gallery</NavBtns>
             <NavBtns link="/">R&eacute;sume</NavBtns>
             <NavBtns link="/">GitHub</NavBtns>
             <NavBtns link="/">LinkedIn</NavBtns>
-
-
-              
-              
         </div>
     )
 }
