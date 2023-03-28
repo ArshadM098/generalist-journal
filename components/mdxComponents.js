@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link"
 import Image from "next/image"
 
 export function Text1({children}){
@@ -67,7 +68,7 @@ export function CodeBlock({ children }) {
   
 export function SkillBlock({ children }) {
     return (
-      <div className=" inline relative w-fit border-[1px] px-2 py-2 text-white  border-orange-800 border-solid text-center">
+      <div className=" inline relative w-fit border-[1px] px-4 py-2 text-orange-500  border-orange-500 border-solid text-center">
        {children}
       </div>
     );
@@ -82,10 +83,18 @@ export function TitleText({children}){
     parentDiv.style.height = `${combinedHeight}px`;
   }, []);
   return (
-    <div id="containerTitleText" className="relative test">
-      <div id="text_box" className="absolute top-4 h-fit w-full p-5 pt-10 border-slate-500 border-solid border-[1px]">{children[1]}</div>
-      <div className="absolute bg-red-900 text-white p-1 px-4 -left-4 w-fit text-2xl">{children[0]}</div>
+    <div id="containerTitleText" className="relative">
+      <div id="text_box" className="absolute top-4 h-fit w-full p-5 pt-10 pb-8 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
+      <div className="absolute bg-red-900 text-white p-1 px-4 -left-4 w-fit text-2xl ">{children[0]}</div>
       
     </div>
   )
 }
+
+export function SocialButton({children,link="/"}){
+  return(
+      <Link href={link} className="group relative cursor-pointer">
+          <div className="px-2 py-1 absolute pb-2 pr-3 border-t-0 border-l-0 border-2 border-solid border-slate-500 text-transparent w-fit group-hover:border-white transition-all">{children}</div>
+          <div className="px-2 py-1 absolute border-[1px] border-solid border-slate-500 w-fit bg-black group-hover:active:text-slate-500 transition-all">{children}</div>
+      </Link>)
+      }

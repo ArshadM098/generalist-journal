@@ -7,7 +7,7 @@ export default function DisplayCard({ children, imageUrl, link="/" }) {
 
   return (
     <div
-      className={`border-slate-700 border-[1px] rounded-lg border-solid overflow-hidden block w-[400px] h-[250px] bg-cover bg-center bg-no-repeat display-card`}
+      className={`border-slate-700 border-[1px] rounded-lg border-solid overflow-hidden block w-[400px] h-[250px] bg-cover bg-center bg-no-repeat`}
       style={{ backgroundImage: `url(${imageUrl})` }}
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}
