@@ -12,7 +12,7 @@ export default function DisplayCard({ children, imageUrl, link="/" }) {
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}
     >
-      <div className="relative h-full w-full backdrop-blur-[2px] transition-all">
+      <div className={`${isHovered ? " backdrop-brightness-[0.2]" : " backdrop-brightness-100"} relative h-full w-full backdrop-blur-[2px] transition-all`}>
         <div className="absolute text-white text-2xl font-bold m-5">{children}</div>
         <div className={`absolute bottom-0 right-0 transition-opacity ${isHovered ? "opacity-100" : "opacity-0"}`}>
           <RoundedButton link={link}>
