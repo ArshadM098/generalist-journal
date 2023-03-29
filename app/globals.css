@@ -4,7 +4,7 @@
 
 @layer utilities {
   .test {
-    border: 0px dotted red;
+    border: 1px dotted red;
   }
   
 }

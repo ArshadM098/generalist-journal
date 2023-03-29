@@ -1,6 +1,7 @@
 'use client';
 import Link from "next/link"
 import Image from "next/image"
+import { useState } from "react";
 
 export function Text1({children}){
     return(
@@ -8,20 +9,20 @@ export function Text1({children}){
     )
 }
 export function TitleL({children}){
-    return(
-        <div className="test pt-20 text-7xl first-letter:text-8xl capitalize">{children}</div>
-    )
-    }
+  return(
+    <div className="test text-7xl first-letter:text-8xl uppercase">{children}</div>
+)
+}
 
 export function TitleM({children}){
     return(
-        <div className="test text-5xl first-letter:text-6xl">{children}</div>
+        <div className="test text-5xl first-letter:text-6xl uppercase">{children}</div>
     )
     }
 
 export function TitleS({children}){
     return(
-        <div className="test text-3xl first-letter:text-4xl text-slate-500">{children}</div>
+        <div className="test text-3xl first-letter:text-4xl text-slate-500 uppercase">{children}</div>
         )
         }
 
@@ -30,15 +31,15 @@ export function Image1({src}){
         <Image src={src} className="h-64 w-fit test object-contain rounded-md overflow-hidden m-auto"></Image>
     )
     }
-
-export function TextImage({ src, children, reverseOrder = false }) {
+import img1 from "public/placeholder.webp";
+export function TextImage({ src=img1, children, reverseOrder = false }) {
     const imageOrder = reverseOrder ? "lg:order-1" : "lg:order-2";
     const textOrder = reverseOrder ? "lg:order-2" : "lg:order-1";
   
     return (
-      <div className="flex flex-row gap-2 w-full test justify-start flex-wrap">
-        <Image src={src} className={`h-64 test w-fit object-contain rounded-md ${imageOrder} order-2`} />
-        <div className={`test text-left p-2 text-2xl grow-1 max-w-[750px] ${textOrder} order-1`}>
+      <div className="flex flex-row gap-2 w-full test flex-wrap">
+        <Image src={src} className={`h-64 test w-fit object-contain grow-0 rounded-md ${imageOrder} order-2`} />
+        <div className={`test text-left p-2 text-2xl justify-self-stretch max-w-[750px] w-full ${textOrder} order-1`}>
           {children}
         </div>
       </div>
@@ -90,8 +91,8 @@ export function TitleText({children}){
   }, []);
   return (
     <div id="containerTitleText" className="relative">
-      <div id="text_box" className="absolute top-4 h-fit w-full p-5 pt-10 pb-8 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
-      <div className="absolute bg-orange-500 text-white p-1 px-4 -left-4 w-fit text-2xl ">{children[0]}</div>
+      <div id="text_box" className="absolute top-0 h-fit w-full p-5 pt-12 pb-6 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
+      <div className="absolute bg-orange-500 text-white p-1 px-4 -left-4 w-fit text-1xl top-2">{children[0]}</div>
       
     </div>
   )
@@ -104,3 +105,21 @@ export function SocialButton({children,link="/"}){
           <div className="px-2 py-1 absolute border-[1px] border-solid border-slate-500 w-fit bg-black group-hover:active:text-slate-500 transition-all">{children}</div>
       </Link>)
       }
+
+export function ExpandingBox({children}){
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  return (
+    <div className="relative h-auto min-h-[20px]">
+      <div className={`
+      border-0 bg-gradient-to-br from-gray-800 to-gray-900 shadow-inner shadow-black inset-y-0 pt-8
+      transition-all origin-top z-0 border-white rounded-md  w-full  mt-6 inset-0
+      ${isCollapsed ? "h-0 pt-0 opacity-0" : "h-96"}`}>{children[1]}</div>
+      <div className="absolute top-0 px-6 py-2 left-3 bg-orange-500 text-white w-fit z-10 cursor-pointer select-none"
+       onClick={()=>{ setIsCollapsed(!isCollapsed)}}>
+      {children[0]}
+      </div>
+
+    </div>
+  )
+};

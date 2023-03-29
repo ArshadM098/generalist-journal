@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='bg-black text-white overflow-scroll-y overflow-x-hidden'>
         
-        <div  className='overflow-scroll z-10'>{children}</div>
+        <div  className='z-10 py-24'>{children}</div>
         <div className={`fixed top-0 left-0 bg-black -z-10 transition-all h-full w-full ${showDropdown ? 'z-30 opacity-70 ':'-z-10 opacity-0'}`} onClick={()=> setShowDropdown(false)}></div>
         <div className={`z-40 fixed backdrop-blur-xl h-full right-0 top-0
          ${showDropdown ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} transition-all`}
