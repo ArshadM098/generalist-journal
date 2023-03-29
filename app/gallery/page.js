@@ -5,10 +5,17 @@ export default function Home(){
     var img1 = '/minimal-test.jpg';
     return(
         <>
-                <DisplayCard imageUrl={img1} link="/p1">Image Denoising</DisplayCard>
-                <DisplayCard imageUrl={img1}>Adaptive Thresholding</DisplayCard>
-                <DisplayCard imageUrl={img1}>PROJECT: Frosty</DisplayCard>
-                <DisplayCard imageUrl={img1}>PROJECT: Dexterous Paws</DisplayCard>
+                <DisplayCard link="/image-denoising" tag="Project">Image Denoising</DisplayCard>
+                <DisplayCard link="/mac-datapath" tag="Project">MAC Datapath for Neural Networks</DisplayCard>
+                <DisplayCard tag="Project">Wrist Aid</DisplayCard>
+                <DisplayCard tag="Research">Ground Effect Quadcopter Stabilization</DisplayCard>
+                <DisplayCard tag="Knowledge">Hardware Interface Buses</DisplayCard>
+                <DisplayCard tag="Project">Autonomous Snow Removal Robot</DisplayCard>
+                <DisplayCard tag="Knowledge">Reinforcement Learning: Actor Critic Method</DisplayCard>
+                <DisplayCard >Sorting Algorithms</DisplayCard>
+                <DisplayCard >PROJECT: Frosty</DisplayCard>
+                <DisplayCard >PROJECT: Extended Sight</DisplayCard>
+                <DisplayCard >PROJECT: Dexterous Paws</DisplayCard>
         </>
     )
 }
