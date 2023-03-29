@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <NavBar />
         </div>
         {/* <div className={`test fixed bg-black opacity-0 w-full h-full ${showDropdown ? 'opacity-[0.25] z-30':'-z-10'} transition-all`}></div> */}
-        <div className="z-50 fixed top-0 right-0 w-fit m-10 hover:cursor-pointer select-none" onClick={() => setShowDropdown(!showDropdown)}>
+        <div className="z-50 fixed top-0 right-0 w-auto h-auto m-10 hover:cursor-pointer select-none" onClick={() => setShowDropdown(!showDropdown)}>
           <HamBtn />
         </div>
       </body>

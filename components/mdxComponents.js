@@ -3,14 +3,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react";
 
+const bodyText = "font-light text-2xl";
+
 export function Text1({children}){
     return(
-        <div className="test p-2 text-2xl" >{children}</div>
+        <div className={`test p-2 ${bodyText}`} >{children}</div>
     )
 }
 export function TitleL({children}){
   return(
-    <div className="test text-7xl first-letter:text-8xl uppercase">{children}</div>
+    <div className="test text-7xl font-bold first-letter:text-8xl uppercase">{children}</div>
 )
 }
 
@@ -39,7 +41,7 @@ export function TextImage({ src=img1, children, reverseOrder = false }) {
     return (
       <div className="flex flex-row gap-2 w-full test flex-wrap">
         <Image src={src} className={`h-64 test w-fit object-contain grow-0 rounded-md ${imageOrder} order-2`} />
-        <div className={`test text-left p-2 text-2xl justify-self-stretch max-w-[750px] w-full ${textOrder} order-1`}>
+        <div className={`test text-left p-2 px-5 text-2xl justify-self-stretch max-w-[750px] w-full ${textOrder} order-1`}>
           {children}
         </div>
       </div>
@@ -86,13 +88,13 @@ export function TitleText({children}){
     const parentDiv = document.getElementById("containerTitleText");
     const child2 = document.getElementById("text_box");
 
-    const combinedHeight = child2.offsetHeight + 40;
-    parentDiv.style.height = `${combinedHeight}px`;
+    // const combinedHeight = child2.offsetHeight + 40;
+    // parentDiv.style.height = `${combinedHeight}px`;
   }, []);
   return (
     <div id="containerTitleText" className="relative">
-      <div id="text_box" className="absolute top-0 h-fit w-full p-5 pt-12 pb-6 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
-      <div className="absolute bg-orange-500 text-white p-1 px-4 -left-4 w-fit text-1xl top-2">{children[0]}</div>
+      <div id="text_box" className="relative font-light text-2xl top-0 h-auto w-full p-5 pt-16 pb-6 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
+      <div className="absolute font-bold bg-orange-700 text-white p-1 px-4 -left-4 w-fit text-3xl top-2">{children[0]}</div>
       
     </div>
   )
