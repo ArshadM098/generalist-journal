@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       <body className='bg-black text-white overflow-scroll-y overflow-x-hidden'>
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBTW8D4"
-         height="0" width="0" style="display:none;visibility:hidden">
+         height="0" width="0" className='hidden'>
         </iframe></noscript>
         
         <div  className='z-10 py-24'>{children}</div>
