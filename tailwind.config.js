@@ -8,6 +8,11 @@ module.exports = {
     "./*.js"],
   theme: {
     extend: {},
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      circle: 'circle',
+    },
   },
   plugins: [],
 }

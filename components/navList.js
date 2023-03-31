@@ -7,7 +7,7 @@ export default function NavList(){
             <NavBtns link="/">About</NavBtns>
             <NavBtns link="/">Home</NavBtns>
             <NavBtns link="/gallery">Idea Gallery</NavBtns>
-            <NavBtns link="/">R&eacute;sume</NavBtns>
+            <NavBtns link="/resume">R&eacute;sume</NavBtns>
             <NavBtns link="/">GitHub</NavBtns>
             <NavBtns link="/">LinkedIn</NavBtns>
         </div>
