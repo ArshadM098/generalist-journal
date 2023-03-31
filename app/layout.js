@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-          <S  cript dangerouslySetInnerHTML={{
+          <Script  cript dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){
               w[l]=w[l]||[];
               w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
               f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-TBTW8D4');`,
-            }}></S>
+            }}></Script>
       </Head>
       <body className='bg-black text-white overflow-scroll-y overflow-x-hidden'>
       <noscript>
