@@ -36,7 +36,7 @@ export function Experience({children,company=null,start=null,end=null,link=null}
 
 export function SkillTags({ children }) {
     return (
-      <div className=" inline text-sm relative w-fit border-[1px] rounded-full px-4 pt-[1px] uppercase pb-[3px]  text-orange-400  border-orange-400 border-solid">
+      <div className=" select-none  inline text-sm relative w-fit border-[1px] rounded-full px-4 pt-[1px] uppercase pb-[3px]  text-orange-400  border-orange-400 border-solid">
        {children}
       </div>
     );
