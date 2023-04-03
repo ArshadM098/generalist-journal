@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
          height="0" width="0" className='hidden'>
         </iframe></noscript>
         
-        <div  className='z-10 py-24'>{children}</div>
+        <div  className='z-10 pb-24'>{children}</div>
         <div className={`fixed top-0 left-0 bg-black -z-10 transition-all h-full w-full ${showDropdown ? 'z-30 opacity-70 ':'-z-10 opacity-0'}`} onClick={()=> setShowDropdown(false)}></div>
         <div className={`z-40 fixed backdrop-blur-xl h-full right-0 top-0
          ${showDropdown ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} transition-all`}
@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
         <div className="z-50 fixed top-0 right-0 w-auto h-auto m-10 hover:cursor-pointer select-none" onClick={() => setShowDropdown(!showDropdown)}>
           <HamBtn />
         </div>
+        <div className={`fixed w-full bg-yellow-600 h-34 bottom-0 z-50 px-5 py-2`}>This website is still under development. Check out the about page for more information.</div>
       </body>
     </html>
   );

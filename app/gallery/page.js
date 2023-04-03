@@ -5,7 +5,7 @@ export default function Home(){
     var img1 = '/minimal-test.jpg';
     return(
         <>
-                <DisplayCard link="/image-denoising" tag="Project">Image Denoising</DisplayCard>
+                <DisplayCard link="/image-denoising" tag="Project" inProgress={false}>Image Denoising</DisplayCard>
                 <DisplayCard link="/mac-datapath" tag="Project">MAC Datapath for Neural Networks</DisplayCard>
                 <DisplayCard tag="Project">Wrist Aid</DisplayCard>
                 <DisplayCard tag="Research">Ground Effect Quadcopter Stabilization</DisplayCard>
