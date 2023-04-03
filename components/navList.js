@@ -8,8 +8,8 @@ export default function NavList(){
             <NavBtns link="/">Home</NavBtns>
             <NavBtns link="/gallery">Idea Gallery</NavBtns>
             <NavBtns link="/resume">R&eacute;sume</NavBtns>
-            <NavBtns link="/">GitHub</NavBtns>
-            <NavBtns link="/">LinkedIn</NavBtns>
+            <NavBtns link="https://github.com/ArshadM098" external={true}>GitHub</NavBtns>
+            <NavBtns link="https://www.linkedin.com/in/marsha6/" external={true}>LinkedIn</NavBtns>
         </div>
     )
 }
