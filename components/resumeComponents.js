@@ -10,7 +10,7 @@ export function Experience({children,company=null,start=null,end=null,link=null}
     var hasSkills = children[2] != undefined; 
     var skillTags = [];
     if (hasSkills){
-        skillTags= children[2].props.children.split(',');
+        skillTags= children[2].split(',');
     }  
     return (
         <div className="relative mr-5 ">
@@ -49,26 +49,30 @@ export function SkillTags({ children }) {
     const [isCollapsed, setIsCollapsed] = useState(true);
     var skillTags = "";
     var hasSkills = children[2] != undefined;
-    console.log(JSON.stringify(children[2]));
     if(hasSkills){
-        skillTags= JSON.stringify(children[2]).split(',');
+        skillTags= children[2].split(',');
         // skillTags= JSON.parse(children[2]);
     }
   
     return(
-        <div className="relative flex flex-col bg-zinc-900 mr-5 rounded-md p-5">
+        <div className="relative flex flex-col bg-zinc-900 mr-5 rounded-md p-5 pb-2">
             <div className=" absolute text-right top-2 -right-5 min-w-64 min-w-fit bg-orange-700 px-3 py-1 shadow-sm shadow-black">{hasGraduated ? "Graduated on " : "Expected Graduation: "}{GraduationDate}</div>
             <div id="degree" className="text-3xl font-bold first-letter:text-5xl uppercase">{children[0]}</div>
             <div id="institute" className=" first-letter:text-2xl font-light text-orange-400 uppercase">{children[1]}
             </div>
             
-            { hasSkills && <div id="skills" className=" w-full flex flex-row flex-wrap gap-2 text-xl">
-                <span onClick={()=>{ setIsCollapsed(!isCollapsed)}} className="hover:text-orange-400">Techinical Courses:</span>
-                <div className={`${isCollapsed ? "h-0 pt-0 opacity-0" : "h-fit"}`}>
+            { hasSkills && <div id="skills" className=" w-full flex flex-col gap-2 text-xl mt-5">
+                <div onClick={()=>{ setIsCollapsed(!isCollapsed)}} className="hover:text-orange-400 select-none cursor-pointer w-fit">Technical Courses &#8744; </div>
+                <div className={`${isCollapsed ? "h-0 pt-0 opacity-0" : "h-fit mb-5"} transition-all flex flex-row flex-wrap gap-2`}>
                 {skillTags.map((skillTag) => (
                         <SkillTags key={skillTag}>{skillTag}</SkillTags>
                     ))}</div>
                 </div>}
         </div>
     );
+  }
+  export function SectionHeader({children}){
+    return(
+        <div className="text-5xl uppercase first-letter:text-6xl font-bold border-t-2 border-zinc-700 pt-5 border-dashed">{children}</div>        
+    )
   }

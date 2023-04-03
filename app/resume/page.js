@@ -1,19 +1,25 @@
-import { Experience,Education } from "@/components/resumeComponents"
+import { Experience,Education,SectionHeader } from "@/components/resumeComponents"
 import Image from "next/image";
 import img1 from "public/temp-portrait.jpg";
 export default function Home(){
     return (
-        <>  
+        <>  <SectionHeader>Education</SectionHeader>
             <Education hasGraduated={true} GraduationDate="Dec 2022">
-                <>Master of Science in Electrical Engineering</>
+                <>M.S. in Electrical and Computer Engineering</>
                 <>University of Illinois at Chicago</>
-                <>C1,C2,C3</>
-                <>C1,C2,C3</>
-
-                <>C1,C2,C3</>
+                <>Image Analysis and Computer Vision, Neural Networks, Advanced Computer Architecture, Linear Systems, Wearable Technology,
+                VLSI Design, Adaptive Filters, Digital Image Processing, VR/AR Technology</>
 
             </Education>
-                
+            <Education hasGraduated={true} GraduationDate="May 2020">
+                <>B.S. in Electrical and Computer Engineering</>
+                <>University of Illinois at Chicago</>
+                <>Mechatronics, Control Engineering, Digital Signal Processing, Software Design, Robotics: Algorithm and Control,
+                Computer Organization, Data Structures, Priciples of Automatic Control, Communication Engineering and Networks,
+                 Solid State Theory</>
+
+            </Education>
+            <SectionHeader>Experience</SectionHeader>    
             <Experience start="Sep 2022" end="Dec 2022" link="/image-denoising">
                 <>Adaptive Filter Design for Image Denoising Using Reinforcement Learning</>
                 <>
