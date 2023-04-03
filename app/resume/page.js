@@ -1,8 +1,19 @@
-import { Experience } from "@/components/resumeComponents"
-
+import { Experience,Education } from "@/components/resumeComponents"
+import Image from "next/image";
+import img1 from "public/temp-portrait.jpg";
 export default function Home(){
     return (
-        <>
+        <>  
+            <Education hasGraduated={true} GraduationDate="Dec 2022">
+                <>Master of Science in Electrical Engineering</>
+                <>University of Illinois at Chicago</>
+                <>C1,C2,C3</>
+                <>C1,C2,C3</>
+
+                <>C1,C2,C3</>
+
+            </Education>
+                
             <Experience start="Sep 2022" end="Dec 2022" link="/image-denoising">
                 <>Adaptive Filter Design for Image Denoising Using Reinforcement Learning</>
                 <>
