@@ -6,8 +6,8 @@ export default function Home(){
     return(
         <>
                 <DisplayCard link="/image-denoising" tag="Project" inProgress={false}>Image Denoising</DisplayCard>
+                <DisplayCard link="/wrist-aid" tag="Project" inProgress={false}>Wrist Aid</DisplayCard>
                 <DisplayCard link="/mac-datapath" tag="Project">MAC Datapath for Neural Networks</DisplayCard>
-                <DisplayCard tag="Project">Wrist Aid</DisplayCard>
                 <DisplayCard tag="Research">Ground Effect Quadcopter Stabilization</DisplayCard>
                 <DisplayCard tag="Knowledge">Hardware Interface Buses</DisplayCard>
                 <DisplayCard tag="Project">Autonomous Snow Removal Robot</DisplayCard>
