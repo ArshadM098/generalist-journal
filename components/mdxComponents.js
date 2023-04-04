@@ -7,7 +7,7 @@ const bodyText = "font-light text-2xl";
 
 export function Text1({children}){
     return(
-        <div className={`test p-2 ${bodyText}`} >{children}</div>
+        <div className={`test p-2 px-5  leading-8 ${bodyText}`} >{children}</div>
     )
 }
 export function TitleL({children}){
@@ -24,7 +24,7 @@ export function TitleM({children}){
 
 export function TitleS({children}){
     return(
-        <div className="test text-3xl first-letter:text-4xl text-slate-500 uppercase">{children}</div>
+        <div className="test text-3xl first-letter:text-4xl text-zinc-400 uppercase">{children}</div>
         )
         }
 
@@ -40,8 +40,8 @@ export function TextImage({ src=img1, children, reverseOrder = false }) {
   
     return (
       <div className="flex flex-row gap-2 w-full test flex-wrap">
-        <Image src={src} className={`h-64 test w-fit object-contain grow-0 rounded-md ${imageOrder} order-2`} />
-        <div className={`test text-left p-2 px-5 text-2xl justify-self-stretch max-w-[750px] w-full ${textOrder} order-1`}>
+        <Image src={src} className={`h-64 test w-fit object-scale-down grow-0 rounded-md ${imageOrder} order-2`} />
+        <div className={`test text-left py-2 px-5 font-light text-2xl justify-self-stretch max-w-[750px] w-full ${textOrder} order-1  leading-8`}>
           {children}
         </div>
       </div>
@@ -93,7 +93,7 @@ export function TitleText({children}){
   }, []);
   return (
     <div id="containerTitleText" className="relative">
-      <div id="text_box" className="relative font-light text-2xl top-0 h-auto w-full p-5 pt-16 pb-6 border-slate-500 rounded-md border-solid border-[1px]">{children[1]}</div>
+      <div id="text_box" className="relative font-light text-2xl top-0 h-auto w-full p-5 pt-16 pb-6 border-slate-500 rounded-md border-solid border-[1px] leading-8">{children[1]}</div>
       <div className="absolute font-bold bg-orange-700 text-white p-1 px-4 -left-4 w-fit text-3xl top-2">{children[0]}</div>
       
     </div>
