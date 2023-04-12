@@ -1,8 +1,9 @@
-import img1 from "public/placeholder.webp";
-import DisplayCard from "/components/displayCard";
+
 import * as C from "/components/mdxComponents";
 import blockDiagram from "public/image-denoising/block-diagram.webp";
 
+const Content = () =>{ return(
+    <>
 <C.TitleL>Image Denoising</C.TitleL>
 <C.TitleS>Adaptive Filter Design for Image Denoising Using Reinforcement Learning</C.TitleS>
 {/* <C.SocialButton>Github</C.SocialButton> */}
@@ -39,7 +40,6 @@ Using the mechanics of Reinforcement Learning, we define the adaptive filter as 
 agent i.e., the filter is tasked with minimizing the mean square error between the frequency components of the filtered
 noise image and the frequency components of the ground truth by performing predefined actions, which in this case is
 adding filtering window components to itself.
-<br/>
 The internal state transition occurs when an action is performed and stops transitioning when the final state is reached,
 which is a predefined training parameter.
 </C.Text1>
@@ -47,7 +47,9 @@ which is a predefined training parameter.
 <C.Text1>
 For determining the location of the center of the window filter used to design the filter component wise in a 2D grid, we
 define a peak location detecting function.
-<br/>
+
+
+
 To briefly explain the logic behind this method, we will look at the FFT of a 1D signal. Initially, the function can
 determine the amplitude of largest peak in the frequency domain using numpy.max which is used as the upper limit for
 peak detection.
@@ -64,7 +66,7 @@ We define a filter design function that can take certain parameters and provide 
 filter which would be used as the building blocks of the adaptive filter. Specifically, the filter takes in the parameters
 (𝑁, 𝑀, 𝐾, 𝑙𝑜𝑐[𝑥, 𝑦]) to build a 2D array of size 𝑁 × 𝑀 with a window size of 𝐾 at the location 𝑙𝑜𝑐 being its center. The
 function considers boundary conditions to make sure that the filter is of size 𝑁 × 𝑀 after the window creation.
-<br/>
+
 
 </C.Text1>
 <C.TitleS>Adaptive Filter Design</C.TitleS>
@@ -83,17 +85,17 @@ other actions decreases simultaneously.
 <C.TitleS>Training Parameters</C.TitleS>
 <C.Text1>
 The model takes in certain parameters which have significant impact on the design of the filter.
-<br/>
+
 
  - 𝛼: controls the percentage decrease in maximum threshold when finding peaks in the frequency domain.
-Specifically, it is used in the FindMaxN() function. 0 < 𝛼 < 1
-<br/>
+Specifically, it is used in the FindMaxN() function. 
+
  - 𝛽: controls the precision of the window filter components in the adaptive filter. The value of 1 defines that each
 filter designed using consecutive action index would have a difference in width of 2 (due to symmetry). 𝛽 ≥ 1
-<br/>
+
 
 - 𝛾: controls the update policy factor which determines how to reward each action depending on the
-corresponding M.S.E. 0 < 𝛾 < 1
+corresponding M.S.E.    
 
 </C.Text1>
 {/* <C.TitleM>Experimentation</C.TitleM>
@@ -110,5 +112,7 @@ reinforcement learning to improve training and computational cost of the impleme
 </C.Text1>
 
 
-
+</>
+)}
+export default Content;
 

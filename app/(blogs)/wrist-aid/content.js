@@ -1,7 +1,9 @@
-import img1 from "public/placeholder.webp";
-import DisplayCard from "/components/displayCard";
-import * as C from "/components/mdxComponents";
 
+import * as C from "/components/mdxComponents";
+import { GetMetaJSON } from "@/utils/MetaUtils";
+const Content = () =>{ 
+return(
+<>
 <C.TitleL>Wristaid</C.TitleL>
 <C.TitleS>Wearable device designed to prevent the development of RSI.</C.TitleS>
 
@@ -59,8 +61,8 @@ While this project was a great learning experience, I would like to revisit it i
 a more holistic approach. I would like to focus on the user experience and the design of the device.
 </>
 </C.TitleText>
-
-
+</>
+)};export default Content;
 
 
 

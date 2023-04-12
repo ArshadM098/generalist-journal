@@ -1,5 +1,4 @@
-'use client';
-import Content from './content.mdx'
+import Content from './content'
 
 export default function Page(){
     return <Content/>

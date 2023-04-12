@@ -1,9 +1,12 @@
-import img1 from "public/placeholder.webp";
-import DisplayCard from "/components/displayCard";
-import * as C from "/components/mdxComponents";
 
-<C.TitleL>MAC datapath design</C.TitleL>
-<C.TitleS>Multiplication and Accumulation Datapath for Neural Networks</C.TitleS>
+import * as C from "/components/mdxComponents";
+import { GetMetaJSON } from "@/utils/MetaUtils";
+const Content = () =>{ 
+    
+return(
+<>
+<C.TitleL>Ground Effect</C.TitleL>
+<C.TitleS>Effects of ground effect on quadcopters and potential applications.</C.TitleS>
 
 <C.TitleText>
 <>About</>
@@ -13,8 +16,7 @@ that can be used in Neural Networks.
 </>
 </C.TitleText>
 <C.TitleM>Abstract</C.TitleM>
-<C.Text1>
-
+<C.Text1> 
 </C.Text1>
 <C.TitleM>Introduction</C.TitleM>
 <C.TextImage>
@@ -32,7 +34,10 @@ that can be used in Neural Networks.
 <C.TextImage>
 
 </C.TextImage>
+</>
+)}
 
+export default Content;
 
 
 
